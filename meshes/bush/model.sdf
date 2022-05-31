@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="bush">
+    <link name="link">
+      <pose>0 0 -0.15 1.57 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>./meshes/blueberry.obj</uri>
+            <scale>0.005 0.005 0.005</scale>            
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>./meshes/blueberry.obj</uri>
+            <scale>0.005 0.005 0.005</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>./materials/scripts</uri>
+            <uri>./materials/textures</uri>
+            <name>Bush/Diffuse</name>
+          </script>
+        </material> 
+      </visual>
+    </link>    
+  </model>
+</sdf>

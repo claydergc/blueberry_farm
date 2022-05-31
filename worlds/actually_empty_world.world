@@ -1,0 +1,443 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+
+    <!-- A global light source -->
+    <!--<include>
+      <uri>model://sun</uri>
+    </include>-->
+    
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>1.0 1.0 1.0 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 -0.5 -1.0</direction>
+    </light>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <gravity>0 0 -9.8</gravity>
+    </physics>
+    <!--<scene>
+      <ambient>1 1 1 1</ambient>
+      <background>1 1 1 1</background>
+      <shadows>1</shadows>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+    </scene>-->
+
+    <!-- A ground plane -->
+    <!--<include>
+      <uri>model://ground_plane</uri>
+    </include>-->
+
+    <!-- Testing the automatic population of objects -->
+    
+    <population name="bush_population3">
+      <model name="bush3">
+        <include>
+          <static>true</static>
+          <uri>model://bush</uri>          
+        </include>
+      </model>
+      <pose>5 -1 0.1 0 0 0</pose>
+      <box>
+        <size>10 0.6 0.6</size>
+      </box>
+      <model_count>15</model_count>
+      <distribution>
+        <type>linear-x</type>
+      </distribution>
+    </population>
+    
+    <population name="bush_population4">
+      <model name="bush4">
+        <include>
+          <static>true</static>
+          <uri>model://bush</uri>
+        </include>
+      </model>
+      <pose>5 1 0.1 0 0 0</pose>
+      <box>
+        <size>10 0.6 0.6</size>
+      </box>
+      <model_count>15</model_count>
+      <distribution>
+        <type>linear-x</type>
+      </distribution>
+    </population>
+    
+    <population name="bush_population5">
+      <model name="bush5">
+        <include>
+          <static>true</static>
+          <uri>model://bush</uri>
+        </include>
+      </model>
+      <pose>5 3 0.1 0 0 0</pose>
+      <box>
+        <size>10 0.6 0.6</size>
+      </box>
+      <model_count>15</model_count>
+      <distribution>
+        <type>linear-x</type>
+      </distribution>
+    </population>
+    
+    <population name="bush_population6">
+      <model name="bush6">
+        <include>
+          <static>true</static>
+          <uri>model://bush</uri>
+        </include>
+      </model>
+      <pose>5 5 0.1 0 0 0</pose>
+      <box>
+        <size>10 0.6 0.6</size>
+      </box>
+      <model_count>15</model_count>
+      <distribution>
+        <type>linear-x</type>
+      </distribution>
+    </population>
+    
+    <population name="bush_population7">
+      <model name="bush7">
+        <include>
+          <static>true</static>
+          <uri>model://bush</uri>
+        </include>
+      </model>
+      <pose>5 7 0.1 0 0 0</pose>
+      <box>
+        <size>10 0.6 0.6</size>
+      </box>
+      <model_count>15</model_count>
+      <distribution>
+        <type>linear-x</type>
+      </distribution>
+    </population>
+    
+    <model name='shack_0'>
+      <static>true</static>
+      <link name='link_shack_0'>
+        <pose>11.5 -3.5 -0.01 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://shack/meshes/shack.dae</uri>
+              <scale>1.0 1.0 1.0</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://shack/meshes/shack.dae</uri>
+              <scale>1.0 1.0 1.0</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>11.5 -3.5 -0.01 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>        
+        <kinematic>0</kinematic>
+      </link>      
+    </model>
+    
+    <model name='shack_1'>
+      <static>true</static>
+      <link name='link_shack_1'>
+        <pose>12 8 0.04 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://shack/meshes/shack.dae</uri>
+              <scale>1.0 1.0 1.0</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://shack/meshes/shack.dae</uri>
+              <scale>1.0 1.0 1.0</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>12 8 0.04 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>        
+        <kinematic>0</kinematic>
+      </link>      
+    </model>
+    
+    <model name='shack_2'>
+      <static>true</static>
+      <link name='link_shack_2'>
+        <pose>-4 -3 0.04 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://shack/meshes/shack.dae</uri>
+              <scale>1.0 1.0 1.0</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://shack/meshes/shack.dae</uri>
+              <scale>1.0 1.0 1.0</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>-4 -3 0.04 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>        
+        <kinematic>0</kinematic>
+      </link>      
+    </model>
+    
+    <model name='shack_3'>
+      <static>true</static>
+      <link name='link_shack_3'>
+        <pose>-3 8 0.04 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://shack/meshes/shack.dae</uri>
+              <scale>1.0 1.0 1.0</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://shack/meshes/shack.dae</uri>
+              <scale>1.0 1.0 1.0</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>-3 8 0.04 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>        
+        <kinematic>0</kinematic>
+      </link>      
+    </model>
+    
+    <!--<model name='cube_20k_0'>
+      <link name='link'>
+        <pose>0 0 0.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://cube_20k/meshes/cube_20k.stl</uri>
+              <scale>0.5 0.5 0.5</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>          
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cube_20k/meshes/cube_20k.stl</uri>
+              <scale>0.5 0.5 0.5</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>12 0 0 0 -0 0</pose>
+    </model>
+    
+    <model name='cube_20k_1'>
+      <link name='link'>
+        <pose>0 0 0.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://cube_20k/meshes/cube_20k.stl</uri>
+              <scale>0.5 0.5 0.5</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>          
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cube_20k/meshes/cube_20k.stl</uri>
+              <scale>0.5 0.5 0.5</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>12 2 0 0 -0 0</pose>
+    </model>
+    
+    <model name='cube_20k_2'>
+      <link name='link'>
+        <pose>0 0 0.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://cube_20k/meshes/cube_20k.stl</uri>
+              <scale>0.5 0.5 0.5</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>          
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cube_20k/meshes/cube_20k.stl</uri>
+              <scale>0.5 0.5 0.5</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>12 4 0 0 -0 0</pose>
+    </model>
+    
+    <model name='cube_20k_3'>
+      <link name='link'>
+        <pose>0 0 0.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://cube_20k/meshes/cube_20k.stl</uri>
+              <scale>0.5 0.5 0.5</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>          
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cube_20k/meshes/cube_20k.stl</uri>
+              <scale>0.5 0.5 0.5</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>5 9 0 0 -0 0</pose>
+    </model>-->
+
+  </world>
+</sdf>
+
+
