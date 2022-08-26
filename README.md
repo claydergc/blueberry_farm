@@ -1,2 +1,2 @@
 # blueberry_farm
-A virtual blueberry farm that works in Gazebo
+A virtual blueberry farm that runs in Gazebo
