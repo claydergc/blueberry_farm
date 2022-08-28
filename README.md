@@ -14,7 +14,7 @@ Ricardo Jesus Huaman Kemper, Clayder Gonzalez, Sixto Ricardo Prado Gardini: Auto
 }
 ```
 
-##Installation and Use
+## Installation and Use
 
 This world has been tested in Ubuntu 18.04 and 20.04. 
 
@@ -24,10 +24,10 @@ git clone https://github.com/claydergc/blueberry_farm.git
 roslaunch blueberry_farm blueberry_farm.launch 
 ```
 
-##Environment details
-###Environment dimensions
+## Environment details
+### Environment dimensions
 The area where the blueberry bushes are located is 9.98 m in the x-axis and 8.60 m in the y-axis. Additionally, the distance between crop rows is 1.40 m width. 
-###Blueberry bush
+### Blueberry bush
 The blueberry bush 3D model’s dimensions are 0.65 m × 0.60 m × 0.55 m. 
-###Shack
+### Shack
 The shack 3D model’s dimensions are 2.44 m × 2.40 m × 3.75 m
