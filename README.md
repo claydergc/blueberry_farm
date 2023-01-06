@@ -6,12 +6,15 @@ If you use this code in an academic context, please cite the following paper:
 Ricardo Jesus Huaman Kemper, Clayder Gonzalez, Sixto Ricardo Prado Gardini: Autonomous Navigation of a Four-Wheeled Robot in a Simulated Blueberry Farm Environment, IEEE Andean Conference (ANDESCON), 2022.
 
 ```
-@InProceedings{Huaman22andescon,
-  author = {Huaman, Ricardo and Gonzalez, Clayder and Prado, Sixto},
-  title = {Autonomous Navigation of a Four-Wheeled Robot in a Simulated Blueberry Farm Environment},
-  booktitle = {IEEE Andean Conference (ANDESCON)},
-  year = {2022}
-}
+@INPROCEEDINGS{9989865,  
+author={Kemper, Ricardo Jesus Huaman and Gonzalez, Clayder and Gardini, Sixto Ricardo Prado},  
+booktitle={2022 IEEE ANDESCON},   
+title={Autonomous Navigation of a Four-Wheeled Robot in a Simulated Blueberry Farm Environment},   
+year={2022},  
+volume={},  
+number={},  
+pages={1-6},  
+doi={10.1109/ANDESCON56260.2022.9989865}}
 ```
 
 ## Installation and Use
